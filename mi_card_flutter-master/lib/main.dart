@@ -13,38 +13,30 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
-          verticalDirection: VerticalDirection.down ,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          // verticalDirection: VerticalDirection.down,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.white,
-              child: Text('Hello World'),
+            CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.white,
+              backgroundImage:
+                  NetworkImage('https://random.imagecdn.app/500/150'),
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.green,
-              child: Text('Hello World'),
+            Text(
+              'Hussen Alkunyali',
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontFamily: 'Pushster',
+                  fontWeight: FontWeight.bold),
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-              child: Text('Hello World'),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.blue,
-              child: Text('Hello World'),
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
-              child: Text('Hello World'),
+            Text(
+              'Backend Developer'.toUpperCase(),
+              style: TextStyle(
+                fontSize: 15, color: Colors.white70,
+                // fontFamily: 'Pushster'
+                letterSpacing: 2.5
+              ),
             ),
           ],
         )),
