@@ -39,50 +39,43 @@ class MyApp extends StatelessWidget {
                     // fontFamily: 'Pushster'
                     letterSpacing: 1.5),
               ),
-              Container(
-                child: Row(
-                  children: [
-                    Icon(
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
                       size: 30,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('+218 92 2354234',
+                    title: Text('+218 92 2354234',
                         style: TextStyle(
                             fontFamily: 'Pushster',
                             fontSize: 20,
-                            color: Colors.teal))
-                  ],
+                            color: Colors.teal)),
+                  ),
                 ),
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10),
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'hussenalkunyali@hotmail.com',
-                      style: TextStyle(
-                          fontFamily: 'Pushster',
-                          color: Colors.teal,
-                          fontSize: 20),
-                    )
-                  ],
-                ),
+                child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        'hussenalkunyali@hotmail.com',
+                        style: TextStyle(
+                            fontFamily: 'Pushster',
+                            color: Colors.teal,
+                            fontSize: 20),
+                      ),
+                    )),
               )
             ],
           ),
