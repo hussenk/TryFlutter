@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(
-   MpApp()
-  );
+  return runApp(MpApp());
 }
-
 
 class MpApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.blue.shade400,
         appBar: AppBar(
@@ -26,6 +24,23 @@ class MpApp extends StatelessWidget {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/dice4.png'),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Image.asset('images/dice4.png'),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
