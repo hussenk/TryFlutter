@@ -10,69 +10,37 @@ class XylophoneApp extends StatelessWidget {
   int number;
 
   Widget build(BuildContext context) {
+    void PlaySounds(int number) {
+      player.play('note$number.wav');
+    }
+
+    buildKey(Color color, int number) {
+     return Expanded(
+        child: FlatButton(
+          color: color,
+          onPressed: () {
+            PlaySounds(number);
+          },
+          child: Text('Click me'),
+        ),
+      );
+    }
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              FlatButton(
-                color: Colors.red,
-                onPressed: () {
-                  ;
-                  player.play('note1.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.orange,
-                onPressed: () {
-                  player.play('note2.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.yellow,
-                onPressed: () {
-                  player.play('note3.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.green,
-                onPressed: () {
-                  player.play('note4.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.teal,
-                onPressed: () {
-                  player.play('note5.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  player.play('note6.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
-              FlatButton(
-                color: Colors.purple,
-                onPressed: () {
-                  player.play('note7.wav');
-                  print(number);
-                },
-                child: Text('Click me'),
-              ),
+              buildKey(Colors.red, 1),
+              buildKey(Colors.orange, 2),
+              buildKey(Colors.yellow, 3),
+              buildKey(Colors.green, 4),
+              buildKey(Colors.teal, 5),
+              buildKey(Colors.blue, 6),
+              buildKey(Colors.purple, 7),
+
             ],
           ),
         ),
